@@ -13,15 +13,23 @@ class StreamWriterWrapper implements StreamWriterInterface
     protected $method;
     protected $stream;
     
-    public function __construct($writer, $method, $stream = 'php://output')
+    public function __construct($stream = 'php://output')
     {
-        $this->writer = $writer;
-        $this->method = $method;
         $this->stream = $stream;
     }
     
+    public function setWriter($writer, $method)
+    {
+        $this->writer = $writer;
+        $this->method = $method;
+    }
+
     public function write()
     {
+        if (!isset($this->writer) || !isset($this->method))
+        {
+            //throw new \Exception('Something went wrong!');
+        }
         $this->writer->{$this->method}($this->stream);
     }
 }
