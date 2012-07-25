@@ -24,12 +24,18 @@ class StreamWriterWrapper implements StreamWriterInterface
         $this->method = $method;
     }
 
-    public function write()
+    public function write($stream = null)
     {
         if (!isset($this->writer) || !isset($this->method))
         {
             //throw new \Exception('Something went wrong!');
         }
-        $this->writer->{$this->method}($this->stream);
+		
+		if ($stream == null)
+		{
+			$stream = $this->stream;
+		}
+		
+        $this->writer->{$this->method}($stream);
     }
 }
