@@ -8,6 +8,6 @@ namespace n3b\Bundle\Util\HttpFoundation\StreamResponse;
  */
 interface StreamWriterInterface
 {
-    public function write($stream = null);
+    public function write($stream_writer_option = null);
 }
 
