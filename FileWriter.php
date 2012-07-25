@@ -18,7 +18,7 @@ class FileWriter implements StreamWriterInterface
         $this->file = new File($path);
     }
     
-    public function write()
+    public function write($stream_writer_option=null)
     {
         $this->file->openFile()->fpassthru();
     }
