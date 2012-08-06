@@ -1,5 +1,5 @@
 {
-    "name": "irongit/Symfony2-StreamResponse",
+    "name": "irongit/symfony2-stream-response",
     "type": "symfony-bundle",
     "description": "Symfony2 StreamResponse Bundle",
     "keywords": ["stream", "file", "StreamResponse"],
