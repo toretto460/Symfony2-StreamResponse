@@ -22,5 +22,5 @@
     "autoload": {
         "psr-0": { "n3b\\Bundle\\Util\\HttpFoundation\\StreamResponse": "n3b/Bundle" }
     },
-    "target-dir": "n3b/Bundle/"
+    "target-dir": "n3b/Bundle/Util/HttpFoundation/StreamResponse"
 }
